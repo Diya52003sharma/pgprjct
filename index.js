@@ -16,7 +16,7 @@ app.use('/api',routes)
 const adminadd = require("./server/config/seeder")
 adminadd.adminreg();
 app.use(express.urlencoded({extended:true}))
-app.use(express.static('./build'))
+app.use(express.static('./build'))//after creating build folder it is nesccesary
 app.get('/',(req,res)=>{
     res.json({
     
