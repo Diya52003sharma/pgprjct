@@ -19,6 +19,7 @@ app.use(express.urlencoded({extended:true}))
 app.use(express.static('./build'))
 app.get('/',(req,res)=>{
     res.json({
+    
         status:200,
         success:true,
         message:"api hit "

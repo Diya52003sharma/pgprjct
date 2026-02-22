@@ -29,7 +29,7 @@ register = (req, res) => {
         errMsg.push("Password is required");
     }
     if (errMsg.length > 0) {
-        res.json({
+      return  res.json({
             message: errMsg,
             status: 422,
             success: false
@@ -92,15 +92,17 @@ register = (req, res) => {
                         status: 422,
                         success: false
                     })
-                        .catch((err) => {
+                       
+                }
+                 
+            })
+            .catch((err) => {
                             res.json({
                                 message: "Something went wrong",
                                 status: 500,
                                 success: false
                             })
                         })
-                }
-            })
     }
 }
 
