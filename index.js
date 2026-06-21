@@ -3,7 +3,7 @@ const express = require("express")
 
 const app = express()
 
-const PORT = 5000
+const PORT = 5004
 const db = require("./server/config/db")
 const cors = require('cors')
 app.use(cors())
